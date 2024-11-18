@@ -36,6 +36,8 @@ function createCards(searchCards) {
   searchBlock.append(fragment);
 
   list.addEventListener("click", function (e) {
+    document.querySelector(".search-list").remove();
+    
     let target = e.target.closest("DIV");
     if (target.classList != "search-card") return;
 
